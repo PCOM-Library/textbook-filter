@@ -1,0 +1,68 @@
+<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.js"></script>
+<link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.css">
+
+<div class="admin-note" style="text-align: center;">
+	<div style="font-size:3rem;"><strong>---- Course Selection Form ----</strong></div>
+	<div style="font-size:2rem;"><em>Do Not Edit This Box</em></div>
+</div>
+<div id="textbookForms-container" style="display:none">
+	<h2 class="sr-only" id="textbookForms-heading">
+		Course Display Controls
+	</h2>
+
+	<div class="pcom-tablist" role="tablist" aria-labelledby="textbookForms-heading">
+		<button id="textbookFilterForm-filter" type="button" role="tab" aria-controls="filterForm-container">
+			Filter Courses
+		</button>
+		<div class="spacer"></div>
+		<button id="textbookFilterForm-select" type="button" role="tab" aria-controls="selectForm-container">
+			Select Specific Courses
+		</button>
+		<div class="hfill"></div>
+	</div>
+	<div class="pcom-tab-content" id="textbookFilterForms">
+		<div id="filterForm-container" class="tab-pane" role="tabpabel" aria-labelledby="textbookFilterForm-filter">
+			<form id="filterForm" novalidate>
+				<div id="filterForm-fields"></div>
+
+				<div class="textbook-filter-button-row">
+					<button id="filter_results" type="submit">Filter Courses</button>
+					<button id="filter_reset" type="reset">Reset Form</button>
+					<!-- add a toggle tip -->
+				</div>
+			</form>
+		</div>
+		
+		<div id="selectForm-container" class="tab-pane" role="tabpanel" aria-labelledby="textbookFilterForm-select">
+			<form id="selectForm" novalidate>
+				<fieldset>
+					<legend>Select Courses to Display</legend>
+				</fieldset>
+				<div class="textbook-filter-button-row">
+					<button id="select_results" type="submit">Show Courses</button>
+					<button id="select_reset" type="reset">Reset Form</button>
+				</div>				
+			</form>
+		</div>
+	</div>
+
+
+	<div id="textbook_display_results" aria-live="polite" aria-atomic="true">
+		Showing all courses (0 hidden). 
+	</div>
+
+	<div id="saveCourses-container">
+		<span id="saveCourses-status" class="sr-only" role="status"></span>
+		<button id="saveCourses" type="button" class="save" data-save-msg="Save Courses" data-saving-msg="Saving..." data-saved-msg="Courses Saved">
+			<span class="fa icon" aria-hidden="true"></span>
+			<span class="status">Save Courses</span>
+		</button>
+		<button id="restoreSave" type="button">
+			Restore Save
+		</button>
+		<div class="hfill"></div>
+		<button id="deleteSave" type="button">
+			Clear Save
+		</button>
+	</div>
+</div>
