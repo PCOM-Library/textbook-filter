@@ -1,0 +1,228 @@
+.filter_textbooks_hidden { 
+	display: none; 
+}
+
+#textbookForms-container label {
+	margin-right: .375em;
+	margin-bottom: 0;
+}
+
+#textbookForms-container select {
+	border: solid 2px var(--pcom-dark-blue);
+	border-radius: var(--pcom-border-radius);
+	height: auto;
+	display: inline-block;
+	padding: .25em .5em;
+	font-size: 1rem;
+	line-height: 1.42857143;
+	color: var(--pcom-text);
+	background-color: var(--pcom-white);
+	background-image: none;
+	box-shadow: none;
+}
+#textbookForms-container select:hover {
+	box-shadow: 0px 0px 1px 1px rgba(0,68,141,0.5) inset;
+}
+#textbookForms-container input[type="text"] {
+	border: solid 2px var(--pcom-dark-blue);
+	border-radius: var(--pcom-border-radius);
+	display: inline-block;
+	padding: .25em .5em;
+	font-size: 1rem;
+	line-height: 1.42857143;
+}
+#textbookForms-container select,
+#textbookForms-container input {
+	height: 2rem;
+}
+
+#textbookForms-container #filterForm-fields {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -.5em;
+	justify-content: space-between;
+}
+#textbookForms-container #filterForm-fields > div {
+	margin: 0 .5em 1em;
+}
+
+#textbookForms-container .textbook-filter-button-row {
+	display: flex;
+	margin-top: 1rem;
+}
+#filterForm-fields + .textbook-filter-button-row {
+	margin-top: 0;
+}
+
+#textbookForms-container .textbook-filter-button-row .hfill {
+	flex: 1 0 auto;
+}
+
+#textbookForms-container .textbook-filter-button-row button + button {
+	margin-left: .5em;
+}
+
+#textbookForms-container .textbook-filter-button-row button {
+	border: solid 2px var(--pcom-dark-blue);
+	border-radius: var(--pcom-border-radius);
+	background: var(--pcom-light-gray);
+	color: var(--pcom-text);
+	padding: .125em .5em;
+}
+#textbookForms-container .textbook-filter-button-row button[type="submit"] {
+	color: var(--pcom-white);
+	background: var(--pcom-blue);
+}
+
+#textbookForms-container .textbook-filter-button-row button:hover {
+	background: var(--pcom-yellow);
+	color: var(--pcom-black);
+}
+#textbookForms-container .textbook-filter-button-row button:focus {
+	outline: solid 2px currentColor;
+	outline-offset: -5px !important;
+}
+
+#textbook_display_results {
+	font-weight: 700;
+	font-size: 1.25rem;
+	text-align: center;
+	margin-top: .5rem;
+}
+
+#selectForm fieldset {
+	columns: 2;
+}
+@media only screen and (max-width: 68rem) {
+	#selectForm fieldset {
+		columns: 1;
+	}
+}
+@media only screen and (max-width: 62rem) {
+	#selectForm fieldset {
+		columns: 2;
+	}
+}
+@media only screen and (max-width: 50rem) {
+	#selectForm fieldset {
+		columns: 1;
+	}
+}
+
+#selectForm fieldset legend {
+	border-bottom: solid 2px var(--pcom-blue);
+	color: var(--pcom-text);
+	font-size: 1rem;
+	margin-bottom: .25em;
+	font-weight: 700;
+}
+
+#selectForm fieldset label {
+	display: inline-flex;
+	align-items: baseline;
+}
+#selectForm fieldset label input {
+	position: relative;
+	margin-right: .625em;
+	width: .875em;
+	height: .875em;
+	top: .5px;
+	left: .25em;
+}
+#selectForm fieldset label input:focus {
+	outline: none;
+}
+#selectForm fieldset label:focus-within {
+	outline: solid 2px currentColor;
+	outline-offset: 3px;
+	border-radius: var(--pcom-border-radius);
+}
+
+#selectForm fieldset label span {
+	font-weight: 400;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#textbookForms-container #saveCourses-container {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 ;	
+	margin-top: .5rem;
+}
+
+#textbookForms-container #saveCourses-container .hfill {
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+
+#textbookForms-container #saveCourses-container button + button {
+	margin-left: .5em;
+}
+
+#textbookForms-container #saveCourses-container button {
+	display: none;
+	border: solid 2px var(--pcom-dark-blue);
+	border-radius: var(--pcom-border-radius);
+	background: var(--pcom-light-gray);
+	color: var(--pcom-text);
+	padding: .125em .5em;
+}
+
+#textbookForms-container #saveCourses-container button:focus {
+	outline: solid 2px currentColor;
+	outline-offset: -5px !important;
+}
+
+#textbookForms-container #saveCourses-container button:hover,
+#textbookForms-container #saveCourses-container #saveCourses.save:hover {
+	background: var(--pcom-yellow);
+	color: var(--pcom-black);
+}
+
+#textbookForms-container #saveCourses-container #saveCourses {
+	display: inline-block;
+	background: var(--pcom-blue);
+	color: var(--pcom-white);
+}
+
+#textbookForms-container #saveCourses-container #saveCourses.saving,
+#textbookForms-container #saveCourses-container #saveCourses.saved {
+	cursor: default;
+}
+
+
+#textbookForms-container #saveCourses-container.load #restoreSave {
+	display: inline-block;
+}
+
+#textbookForms-container #saveCourses-container.clear #deleteSave{
+	display: inline-block;
+}
+
+#saveCourses-container #saveCourses.save span.icon:before {
+	content: "\f0c7";
+}
+#saveCourses-container #saveCourses.saving span.icon {
+	animation: spin 2s infinite linear;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	#saveCourses-container #saveCourses.saving span.icon {
+		animation: none;
+	}
+}
+#saveCourses-container #saveCourses.saving span.icon:before {
+	content: "\f110";
+}
+#saveCourses-container #saveCourses.saved span.icon:before {
+	content: "\f00c";
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
