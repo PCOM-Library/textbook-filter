@@ -35,7 +35,7 @@ window.addEventListener('load', function(event) {
 	
 	// LOAD CURSE INFORMATION 
 	let customMetadata = false;
-	let re = /([A-Za-z]+) ([0-9]+[A-Z]{0,2})( \([A-Z]+\))?:/
+	let re = /^([A-Za-z]+) ([0-9]+[A-Z]{0,2})( \([A-Z]+\))?:/
 	let h2 = document.querySelectorAll('#s-lg-col-1 h2.s-lib-box-title');
 	for(h of h2) {
 		// handle specific cases of non-courses

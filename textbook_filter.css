@@ -226,3 +226,11 @@
 		transform: rotate(360deg);
 	}
 }
+
+.pcom-guide div.course-last-updated {
+	font-size: .875rem;
+	color: var(--pcom-dark-gray);
+	text-align: right;
+	border-top: solid 1px var(--pcom-dark-gray);
+	margin-bottom: -.5rem
+}
