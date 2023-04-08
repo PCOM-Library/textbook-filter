@@ -185,7 +185,7 @@ window.addEventListener('load', function(event) {
 	
 
 	// CREATE SELECT FORM
-	form = document.querySelector('#selectForm fieldset');
+	form = document.querySelector('#selectForm fieldset #tab-course-list');
 	for(c of courses) {
 		let label = htmlToElement('<div><label><input type="checkbox" checked><span></span></div>');
 		label.querySelector('span').innerText = c.full;
@@ -222,6 +222,20 @@ window.addEventListener('load', function(event) {
 		selectCourses();
 		changeSaveButton('save');
 		updateLoadStatus();
+	});
+	
+	// select/deselect listeners
+	document.getElementById('all_courses').addEventListener('click', function(evt) {
+		let boxes = document.querySelectorAll('#tab-course-list input[type="checkbox"]');
+		for(b of boxes) {
+			b.checked = true;
+		}
+	});
+	document.getElementById('clear_courses').addEventListener('click', function(evt) {
+		let boxes = document.querySelectorAll('#tab-course-list input[type="checkbox"]');
+		for(b of boxes) {
+			b.checked = false;
+		}
 	});
 	
 	// save event listener

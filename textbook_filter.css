@@ -90,21 +90,49 @@
 	margin-top: .5rem;
 }
 
-#selectForm fieldset {
+#selectForm fieldset #tab-select-panel {
+	text-align: center;
+	margin: 0.5rem 0;
+}
+
+#selectForm fieldset #tab-select-panel button {
+	font-size: .875rem;
+	border: solid 2px var(--pcom-dark-blue);
+	border-radius: var(--pcom-border-radius);
+	background: var(--pcom-light-gray);
+	color: var(--pcom-text);
+	padding: .125em .5em;
+}
+
+#selectForm fieldset #tab-select-panel button:hover {
+  background: var(--pcom-yellow);
+  color: var(--pcom-black);
+}
+
+#selectForm fieldset #tab-select-panel button:focus {
+  outline: solid 2px currentColor;
+  outline-offset: -5px !important;
+}
+
+#selectForm fieldset #tab-select-panel button + button {
+  margin-left: .5em;
+}
+
+#selectForm fieldset #tab-course-list {
 	columns: 2;
 }
 @media only screen and (max-width: 68rem) {
-	#selectForm fieldset {
+	#selectForm fieldset #tab-course-list {
 		columns: 1;
 	}
 }
 @media only screen and (max-width: 62rem) {
-	#selectForm fieldset {
+	#selectForm fieldset #tab-course-list {
 		columns: 2;
 	}
 }
 @media only screen and (max-width: 50rem) {
-	#selectForm fieldset {
+	#selectForm fieldset #tab-course-list {
 		columns: 1;
 	}
 }

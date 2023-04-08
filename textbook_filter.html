@@ -24,7 +24,6 @@
 		<div id="filterForm-container" class="tab-pane" role="tabpabel" aria-labelledby="textbookFilterForm-filter">
 			<form id="filterForm" novalidate>
 				<div id="filterForm-fields"></div>
-
 				<div class="textbook-filter-button-row">
 					<button id="filter_results" type="submit">Filter Courses</button>
 					<button id="filter_reset" type="reset">Reset Form</button>
@@ -37,6 +36,12 @@
 			<form id="selectForm" novalidate>
 				<fieldset>
 					<legend>Select Courses to Display</legend>
+					<div id="tab-select-panel">
+						<button id="all_courses">Select All</button>
+						<button id="clear_courses">Clear Selection</button>
+					</div>
+					<div id="tab-course-list">
+					</div>
 				</fieldset>
 				<div class="textbook-filter-button-row">
 					<button id="select_results" type="submit">Show Courses</button>
