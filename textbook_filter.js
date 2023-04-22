@@ -454,7 +454,11 @@ function loadSavedSettings(saveKey) {
 	else if(json.saveType == 'select') {
 		for(cb of json.checkboxes) { 
 			let checkbox = document.getElementById(cb.checkbox);
+			if(checkbox == null)
+				continue;
 			let span = checkbox.nextElementSibling;
+			if(span == null)
+				continue;
 			if(span.innerText ==  cb.course )
 				checkbox.checked = cb.checked;
 		}
